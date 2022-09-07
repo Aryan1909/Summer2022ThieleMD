@@ -59,7 +59,7 @@ public:
 
   void addConstraint(std::function<void(Particle *)> constraint);
   void relax();
-  void relax(int numSteps);
+  void relax(int numSteps, int imageResolution, int particleRadius);
 
   void runTimeStep(int stepNumber);
 };
