@@ -101,7 +101,7 @@ void Simulation::runTimeStep(int stepNumber)
     }
 }
 
-void Simulation::relax(int numSteps)
+void Simulation::relax(int numSteps, int imageResolution, int particleRadius)
 {
     // Initialize all forces and boundary conditions on the particles before the first time-step.
     std::vector<Particle *> particles = grid.getParticles();
@@ -143,7 +143,7 @@ void Simulation::relax(int numSteps)
     //         dataManager.convertToImages(&grid);
     //     }
     // }
-
+    dataManager.getdata(imageResolution,particleRadius);
     dataManager.convertToImages(&grid);
 
     // End of Simulation
