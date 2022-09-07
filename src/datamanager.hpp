@@ -37,4 +37,7 @@ public:
     void writeFile();
     // Save the positions of all skyrmions at the current timestep.
     void saveFrame(int frameIndex, std::vector<Particle *> particles);
+    // get the input for image resolution and particle radius
+    void getdata(int ir, int pr );
+
 };
