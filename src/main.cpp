@@ -224,6 +224,8 @@ int main()
     int savecounter;
     int periodic;
     double hallAngle;
+    int imageResolution;
+    int particleRadius;
     double shearForceMag;
     int shearForceStart;
     int shearForceEnd;
@@ -250,6 +252,10 @@ int main()
     input >> periodic;
     input.ignore(256, ' ');
     input >> hallAngle;
+    input.ignore(256, ' ');
+    input >> imageResolution;
+    input.ignore(256, ' ');
+    input >> particleRadius;
     input.ignore(256, ' ');
     input >> shearForceMag;
     input.ignore(256, ' ');
@@ -306,7 +312,7 @@ int main()
     simulation.setTemperature(temperature);
     simulation.setMinimumTemp(minTemp);
     simulation.setCoolingRate(coolingRate);
-    simulation.relax(simulationLength);
+    simulation.relax(simulationLength, imageResolution, particleRadius);
     // this is where the simulation ends
     //simulation.exitThreads();
 
