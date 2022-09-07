@@ -359,6 +359,12 @@ void DataManager::writeFile()
 {
 }
 
+void DataManager::getdata(int ir, int pr ) //to get user specified image res. and particle radius
+{
+    this->imageResolution = ir; 
+    this->particleRadius =  pr;
+}
+
 void DataManager::saveParticle(std::ofstream *stream, Particle *particle)
 {
     // Int so 4 bytes long.
